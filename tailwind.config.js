@@ -8,7 +8,17 @@ module.exports = {
 		path.join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
 	],
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				sans: [
+					'Inter var, sans-serif',
+					{
+						fontFeatureSettings: '"cv11", "ss01"',
+						fontVariationSettings: '"opsz" 32'
+					}
+				]
+			}
+		}
 	},
 	plugins: [
 		// eslint-disable-next-line @typescript-eslint/no-var-requires
