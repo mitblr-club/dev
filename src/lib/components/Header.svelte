@@ -1,9 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 	import { siteConfig } from '$lib/site.config';
+	import ThemeSwitcher from './ThemeSwitcher.svelte';
 
 	let menuOpen = false;
 	let navTop = false;
@@ -102,6 +102,7 @@
 				{/each}
 			</div>
 		</div>
+		<ThemeSwitcher />
 	</nav>
 </header>
 
@@ -111,6 +112,6 @@
 	}
 
 	.header-on-scroll {
-		@apply border-gray-700 bg-green-800 bg-opacity-80 shadow-lg backdrop-blur-[3px] backdrop-saturate-[1.8];
+		@apply border-gray-700 bg-green-800 bg-opacity-80 shadow-lg backdrop-blur-[3px] backdrop-saturate-[1.8] dark:bg-gray-800;
 	}
 </style>

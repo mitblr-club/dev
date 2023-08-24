@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
-	import Header from './components/Header.svelte';
-	import Footer from './components/Footer.svelte';
+	import Header from '$components/Header.svelte';
+	import Footer from '$components/Footer.svelte';
 </script>
 
 <div class="app">
@@ -14,7 +14,7 @@
 	<Footer />
 </div>
 
-<style lang='postcss'>
+<style lang="postcss">
 	.app {
 		display: flex;
 		flex-direction: column;
