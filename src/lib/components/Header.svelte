@@ -6,7 +6,7 @@
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 
 	let menuOpen = false;
-	let navTop = false;
+	let navTop = true;
 
 	function toggleMenu() {
 		menuOpen = !menuOpen;
