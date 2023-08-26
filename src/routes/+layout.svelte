@@ -13,7 +13,6 @@
 
 	function scrollHandler(event: ComponentEvents<AppShell>['scroll']) {
 		navTop = event.currentTarget.scrollTop === 0;
-		console.log(navTop);
 	}
 </script>
 
