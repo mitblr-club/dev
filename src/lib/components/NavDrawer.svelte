@@ -47,8 +47,8 @@
 		</div>
 		<ul class="mx-auto w-full p-10">
 			{#each siteConfig.navLinks as link}
-				<li class="p-4 text-center" on:click={drawerClose}>
-					<a href={link.href} class="text-4xl font-bold">
+				<li class="p-4 text-center">
+					<a href={link.href} class="text-4xl font-bold" on:click={drawerClose}>
 						{link.title}
 					</a>
 				</li>
