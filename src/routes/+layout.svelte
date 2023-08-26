@@ -20,7 +20,7 @@
 	regionPage="relative"
 	slotPageHeader="sticky top-0 z-10 transition-colors transition-shadow duration-200 {navTop
 		? ''
-		: 'shadow-md bg-opacity-60 backdrop-blur-[5px] backdrop-saturate-[1]'}"
+		: 'bg-opacity-60 shadow-md backdrop-blur-[5px] backdrop-saturate-[1]'}"
 	on:scroll={scrollHandler}
 >
 	<svelte:fragment slot="pageHeader">
