@@ -4,6 +4,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: 'Club Name',
+  institution: 'Manipal Institue of Technology, Bangalore',
+  address: 'BSF Campus, Yelahanka, MAHE, Bengaluru, Karnataka 560064',
   description: 'This is a club website template.',
   navLinks: <NavItem[]>[
     {
@@ -24,5 +26,6 @@ export const siteConfig = {
     linkedin: 'https://in.linkedin.com/company/codexclub',
     github: 'https://github.com/CodeX-MIT-BLR',
     twitter: 'https://twitter.com/CodeX_MITB',
+    insitute: 'https://manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mitblr.html'
   },
 };
