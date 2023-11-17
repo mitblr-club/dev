@@ -28,4 +28,8 @@ export const siteConfig = {
     twitter: 'https://twitter.com/CodeX_MITB',
     insitute: 'https://manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mitblr.html'
   },
+  contactDetails: {
+    number: '+91 1234567890',
+    email: 'abc.efg@gmail.com'
+  }
 };
