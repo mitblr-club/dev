@@ -4,7 +4,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: 'Club Name',
-  institution: 'Manipal Institue of Technology, Bangalore',
+  institution: 'Manipal Institute of Technology Bengaluru (MIT)',
   address: 'BSF Campus, Yelahanka, MAHE, Bengaluru, Karnataka 560064',
   description: 'This is a club website template.',
   navLinks: <NavItem[]>[
