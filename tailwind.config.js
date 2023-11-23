@@ -32,9 +32,39 @@ module.exports = {
       },
     },
     extend: {
-      minHeight: {
-        '5vh': '5vh',
-        '70vh': '70vh'
+      spacing:{
+        c1:'1%',
+        c3:'3%',
+        c10: '10%',
+        c15: '15%',
+        c20: '20%',
+        c25: '25%',
+      },
+      height:{
+        c10:'10vh',
+        c20:'20vh',
+        c30:'30vh',
+        c40:'40vh',
+        c50:'50vh',
+        c60:'60vh',
+        c70:'70vh',
+      },
+      width:{
+        c2:'2vw',
+        c3:'3vw',
+        c5:'5vw',
+        c10:'10vw',
+        c20:'20vw',
+        c30:'30vw',
+        c40:'40vw',
+        c50:'50vw',
+        c60:'60vw',
+        c70:'70vw',
+      },
+      padding:{
+        c2:'2vw',
+        c4:'4vw',
+        c6:'6vw',
       },
       colors: {
         border: "hsl(var(--border))",
