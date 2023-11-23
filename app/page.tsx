@@ -28,7 +28,7 @@ export default function IndexPage() {
           </div>
 
           <div>
-          <Link href="/blog">
+          <Link href="/about">
             <button className="inline-flex items-center bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-700 font-bold rounded-md border-none box-border cursor-pointer font-jetbrains-mono text-base h-12 justify-center overflow-hidden px-4 relative text-left text-decoration-none transition-transform transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation whitespace-nowrap will-change-box-shadow will-change-transform shadow-md hover:shadow-lg active:shadow-inner-lg focus:ring-2 focus:ring-gray-300 focus:outline-none focus:ring-opacity-50 hover:ring-2 hover:ring-gray-300 hover:ring-opacity-50 active:ring-2 active:ring-gray-300 active:ring-opacity-50 hover:-translate-y-2 active:translate-y-2">
               Learn More
             </button>
