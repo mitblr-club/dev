@@ -9,6 +9,7 @@ export default function IndexPage() {
     <div className="flex flex-col p-c6">
       
       <Title />
+
       <FAQs />
   
     </div>

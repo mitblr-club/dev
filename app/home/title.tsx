@@ -19,7 +19,7 @@ export default function Title() {
           <div>
           <Link href="/events">
             <button 
-            className="inline-flex items-center font-bold rounded-md border-none box-border cursor-pointer text-white font-jetbrains-mono text-base h-12 justify-center overflow-hidden px-4 relative text-left text-decoration-none transition-transform transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation whitespace-nowrap will-change-box-shadow will-change-transform bg-gradient-to-r from-cyan-400 to-indigo-600 shadow-md hover:shadow-lg active:shadow-inner-lg focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 hover:ring-2 hover:ring-blue-500 hover:ring-opacity-50 active:ring-2 active:ring-blue-500 active:ring-opacity-50 hover:-translate-y-2 active:translate-y-2">
+            className="inline-flex items-center font-bold rounded-md border-none box-border cursor-pointer text-white font-jetbrains-mono text-base h-12 justify-center overflow-hidden px-4 relative text-left text-decoration-none transition-transform transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation whitespace-nowrap will-change-box-shadow will-change-transform bg-gradient-to-r from-purple-500 to-purple-700 shadow-md hover:shadow-lg active:shadow-inner-lg focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 hover:ring-2 hover:ring-blue-500 hover:ring-opacity-50 active:ring-2 active:ring-blue-500 active:ring-opacity-50 hover:-translate-y-2 active:translate-y-2">
               Current Events 
             </button>
           </Link>

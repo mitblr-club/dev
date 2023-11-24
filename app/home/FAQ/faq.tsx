@@ -11,21 +11,23 @@ import {
 
 export default function FAQs(){
     return(
-        <div>
-        <div className="text-6xl font-bold">FAQs</div>
+        <div className="mt-c25 md:mt-c15 xl:mt-c10 p-c3">
 
-        <Accordion type="single" collapsible className="w-full">
+        <div className="text-md font-bold text-purple-700 dark:text-purple-400">FAQs</div>
+        <div className="text-4xl font-serif">Have a Question?</div>
+
+        <Accordion type="single" collapsible className="w-full px-c3 py-c1">
 
         {data.map((item,index) => (
 
             <FAQ.Content key={index} value={`item-${index.toString()}`}>
 
             <FAQ.Question>
-                {index+1}.{item.Question}
+                <div className="text-left">{index+1}.{item.Question}</div>
             </FAQ.Question>
 
             <FAQ.Answer>
-                {item.Answer}
+                <div className="transition-color font-light">{item.Answer}</div>
             </FAQ.Answer>
 
             </FAQ.Content>
