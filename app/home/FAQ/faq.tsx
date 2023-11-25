@@ -11,7 +11,7 @@ import {
 
 export default function FAQs(){
     return(
-        <div className="mt-c25 md:mt-c15 xl:mt-c10 p-c3">
+        <div className="mt-c5 md:mt-c1 lg:mt-c1 xl:mt-0 px-c3 pb-c3">
 
         <div className="text-md font-bold text-purple-700 dark:text-purple-400">FAQs</div>
         <div className="text-4xl font-serif">Have a Question?</div>
@@ -69,4 +69,3 @@ const FAQ = {
     Question: Question,
     Answer: Answer,
 };
-

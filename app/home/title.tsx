@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function Title() {
     return(
         <div 
-      className="flex flex-col justify-between items-center h-c60 md:h-c30 lg:h-c30 xl:h-c40 mt-c25 md:mt-c15 xl:mt-c3">
+      className="flex flex-col justify-between items-center h-c60 md:h-c30 lg:h-c30 xl:h-c45 mt-c25 md:mt-c15 xl:mt-c5 overflow-x-hidden">
 
-        <h1 className="animate-in fade-in-0 duration-1000 text-center block px-3 text-5xl md:text-6xl xl:text-7xl font-bold">
+        <div className="animate-in fade-in-0 duration-1000 text-center px-3 text-5xl md:text-6xl xl:text-7xl font-bold">
           {siteConfig.homePage.tagline}
-        </h1>
+        </div>
 
         <div className="text-center sm:text-xs md:text-base lg:text-xl px-c10">
           {siteConfig.description}
