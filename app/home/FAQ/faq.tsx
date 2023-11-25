@@ -14,7 +14,7 @@ export default function FAQs(){
         <div className="mt-c5 md:mt-c1 lg:mt-c1 xl:mt-0 px-c3 pb-c3">
 
         <div className="text-md font-bold text-purple-700 dark:text-purple-400">FAQs</div>
-        <div className="text-4xl font-serif">Have a Question?</div>
+        <div className="text-4xl font-medium">Have a Question?</div>
 
         <Accordion type="single" collapsible className="w-full px-c3 py-c1">
 

@@ -1,7 +1,7 @@
 const data = [
     {
         Title: "Web Template",
-        Description: "Ready to use no code website template. Just adjust for your content and you're ready to go."
+        Description: "Ready to use no code website template, integrated with a Notion API, to manage your club's website, free of cost."
     },
     {
         Title: "Club Domain",
@@ -13,7 +13,7 @@ const data = [
     },
     {
         Title: "Logistics&Ops",
-        Description: "Mobile app to manage your club's logistics and operations, and to simplify the process of managing your club."
+        Description: "Mobile app to manage your club's logistics and operations, and to simplify the process of managing your club, all in one place."
     },
 ]
 
