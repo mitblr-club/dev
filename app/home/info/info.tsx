@@ -16,7 +16,8 @@ export default function Info() {
                 lg:grid lg:grid-cols-2 lg:gap-c3vh">
             
                 {data.map((item,index)=>(
-                <Card className="w-c70 md:w-fit h-fit" key={index}>
+                <Card className="w-c70 md:w-fit h-fit relative overflow-hidden rounded-lg 
+                shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out" key={index}>
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold text-left">
                             {item.Title}
