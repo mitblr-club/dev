@@ -11,7 +11,7 @@ export default function Info() {
   return (
     <div className="mt-c20 p-c6 md:mt-c10 lg:mt-c5 xl:mt-c1">
       <div className="p-c3 text-center text-2xl font-bold md:text-4xl">
-        What's in mitblr.club?<br></br>
+        What&apos;s in mitblr.club?<br></br>
         <span className="p-c1 text-lg font-normal">Check out our projects</span>
       </div>
 
@@ -21,8 +21,8 @@ export default function Info() {
       >
         {data.map((item, index) => (
           <Card
-            className="relative h-fit w-c70 transform overflow-hidden rounded-lg 
-                shadow-md transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:w-fit"
+            className="relative h-fit w-c70 overflow-hidden rounded-lg 
+                shadow-md duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:w-fit"
             key={index}
           >
             <CardHeader>
