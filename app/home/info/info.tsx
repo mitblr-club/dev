@@ -1,11 +1,10 @@
+import { Icons } from '@/components/icons';
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-
-import { Icons } from '@/components/icons';
 
 import data from './data';
 
@@ -27,12 +26,12 @@ export default function Info() {
                 shadow-md md:w-fit"
             key={index}
           >
-            <CardHeader className='flex flex-col gap-2'>
+            <CardHeader className="flex flex-col gap-2">
               <div>{item.Icon}</div>
-              <CardTitle className="text-left text-md font-bold">
+              <CardTitle className="text-md text-left font-bold">
                 {item.Title}
               </CardTitle>
-              <CardDescription className="text-sm text-justify font-medium">
+              <CardDescription className="text-justify text-sm font-medium">
                 {item.Description}
               </CardDescription>
             </CardHeader>
