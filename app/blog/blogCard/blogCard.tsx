@@ -15,7 +15,7 @@ export default function BlogCard() {
   const titleLength: number = 50;
 
   return (
-    <div className="mt-c15 md:mt-c5 xl:mt-c3 ">
+    <div className="mt-c15 md:mt-c5 xl:mt-c3">
       <div className="flex flex-col gap-3 md:grid md:grid-cols-2 xl:grid-cols-3">
         {data.map((item: any, index: number) => {
           let hiddenDescText: string = '';
