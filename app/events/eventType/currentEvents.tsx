@@ -38,7 +38,7 @@ export function CurrentEvents() {
         infiniteLoop={true}
         interval={2000}
         transitionTime={500}
-        className="carousel-container xl:h-120 h-64 md:h-80 lg:h-96"
+        className="carousel-container h-fit bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-110 hover:bg-opacity-100 hover:shadow-lg"
       >
         {currentEvents.map((event, index) => {
           let hiddenText: string = '';
@@ -55,7 +55,7 @@ export function CurrentEvents() {
           return (
             <div key={index} className="carousel-item">
               <Link href="/">
-                <Card className="h-full">
+                <Card className="h-fit ">
                   <CardHeader>
                     <CardTitle>{event.name}</CardTitle>
                     <div className="text-sm font-light dark:font-extralight">

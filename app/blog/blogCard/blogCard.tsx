@@ -11,6 +11,17 @@ import {
 import data from './data';
 
 export default function BlogCard() {
+
+  if (data.length === 0) {
+    return (
+      <div className="mt-c15 md:mt-c5 xl:mt-c3">
+        <div className="text-center text-xl">
+          No Events Available. Please Check Again Later
+        </div>
+      </div>
+    );
+  }
+
   const descLength: number = 100;
   const titleLength: number = 50;
 
@@ -42,7 +53,7 @@ export default function BlogCard() {
           return (
             <div key={index} className="mt-c5">
               <Link href="/">
-                <Card className="flex h-fit w-c80 flex-col duration-300 ease-in-out hover:scale-105 hover:border-primary hover:shadow-lg focus:border-primary md:w-c40 xl:w-c25">
+                <Card className="flex h-fit w-c80 flex-col bg-card bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25">
                   <CardHeader>
                     <div className="text-md font-light dark:font-extralight">
                       {item.date}
