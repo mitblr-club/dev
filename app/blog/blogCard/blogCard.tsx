@@ -11,7 +11,6 @@ import {
 import data from './data';
 
 export default function BlogCard() {
-
   if (data.length === 0) {
     return (
       <div className="mt-c15 md:mt-c5 xl:mt-c3">

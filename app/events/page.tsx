@@ -7,9 +7,10 @@ const Events = () => {
       <div className="text-center text-4xl font-bold">Current Events</div>
       <CurrentEvents />
 
-      <div className="mt-c20 md:mt-c10 xl:mt-c5 text-center text-4xl font-bold">Past Events</div>
+      <div className="mt-c20 text-center text-4xl font-bold md:mt-c10 xl:mt-c5">
+        Past Events
+      </div>
       <PastEvents />
-
     </div>
   );
 };
