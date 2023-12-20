@@ -28,7 +28,7 @@ export function CurrentEvents() {
     );
   }
 
-  const targetLength: number = 120;
+  const targetLength: number = 100;
 
   return (
     <div className="mt-c15 md:mt-c5 xl:mt-c3">
@@ -36,6 +36,9 @@ export function CurrentEvents() {
         showThumbs={false}
         autoPlay={true}
         infiniteLoop={true}
+        dynamicHeight={true}
+        showStatus={false}
+        stopOnHover={true}
         interval={2000}
         transitionTime={500}
         className="carousel-container h-fit bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-110 hover:bg-opacity-100 hover:shadow-lg"
@@ -64,8 +67,8 @@ export function CurrentEvents() {
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-col gap-3">
-                      <div className="text-md font-medium dark:font-light">
-                        {event.description}
+                      <div className="text-md text-center font-medium dark:font-light md:text-lg">
+                        {event.description}{' '}
                         <span className="invisible">{hiddenText}</span>
                       </div>
                       <div className="flex flex-col gap-2 text-right">

@@ -7,7 +7,7 @@ const data = [
     time: '4:30 PM',
     venue: 'AB-4 310',
     description:
-      "Just an event that you probably (don't) wanna come to because goddamn this is gonna be a (snooze)fest",
+      "Just an event that you probably (don't) wanna come to because damn this is gonna be a (snooze)fest",
   },
   {
     name: 'Event Type 2',
