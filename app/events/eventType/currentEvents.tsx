@@ -74,7 +74,7 @@ export function CurrentEvents() {
                           {event.date}
                         </div>
                         <div className="text-right">
-                          {index}/{currentEvents.length}
+                          {index + 1}/{currentEvents.length}
                         </div>
                       </div>
                       <CardTitle>{event.name}</CardTitle>
