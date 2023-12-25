@@ -52,7 +52,7 @@ export function PastEvents() {
           return (
             <div key={index} className="mt-c5">
               <Link href="/">
-                <Card className="flex h-fit w-c80 flex-col bg-card bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25">
+                <Card className="flex h-fit w-c80 flex-col bg-card bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg md:w-c40 xl:w-c25">
                   <CardHeader>
                     <div className="text-md font-light dark:font-extralight">
                       {item.date}
