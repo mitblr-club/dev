@@ -42,6 +42,7 @@ export function CurrentEvents() {
         opts={{
           align: 'start',
           loop: true,
+          dragFree: true,
         }}
         plugins={[
           Autoplay({
@@ -68,8 +69,13 @@ export function CurrentEvents() {
                 <Link href="/">
                   <Card className="h-fit">
                     <CardHeader className="text-left">
-                      <div className="text-sm font-light dark:font-extralight">
-                        {event.date}
+                      <div className="flex flex-row justify-between">
+                        <div className="text-sm font-light dark:font-extralight">
+                          {event.date}
+                        </div>
+                        <div className="text-right">
+                          {index}/{currentEvents.length}
+                        </div>
                       </div>
                       <CardTitle>{event.name}</CardTitle>
                     </CardHeader>
