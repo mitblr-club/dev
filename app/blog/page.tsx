@@ -9,6 +9,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
+import { formatDate } from '@/lib/formatDate';
+
 
 export async function getPosts() {
   const res = await fetch(`https://notion-api.splitbee.io/v1/table/${siteConfig.blogTableId}`,
@@ -32,7 +34,11 @@ export default async function Blog() {
 
       <div className="flex flex-col gap-3 md:grid md:grid-cols-2 xl:grid-cols-3">
       {posts && posts.length > 0 ? (
-        posts.map((post: any) => {
+        
+        posts.filter((post:any)=>{
+          return (post.published ? post : null)
+        }).reverse().map((post: any) => {
+        
 
           let hiddenDescText: string = '';
 
@@ -66,7 +72,7 @@ export default async function Blog() {
                 <Card className="flex h-fit w-c80 flex-col bg-card bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25">
                   <CardHeader>
                     <div className="text-md font-light dark:font-extralight">
-                      {post.date}
+                      {formatDate(post.date)}
                     </div>
                     <CardTitle className="flex flex-col justify-center">
                       <div className="flex text-2xl font-bold">
