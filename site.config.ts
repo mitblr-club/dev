@@ -6,6 +6,8 @@ export const siteConfig = {
   name: 'Club Name',
   institution: 'Manipal Institute of Technology Bengaluru (MIT)',
   description: "Empower your MIT Bengaluru club experience with our centralized platform, seamlessly managing and collaborating on events, blogs, and administration.",
+  eventsTableId: "bce097af99dc4179983660dbafb479fc",
+	blogTableId: "bc59e12441b14107880e8e479d89ea50",
   navLinks: <NavItem[]>[
     {
       title: 'Home',
