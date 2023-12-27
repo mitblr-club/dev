@@ -25,7 +25,7 @@ export default async function Blog() {
 
   const posts = await getPosts();
 
-  const descLength: number = 30;
+  const descLength: number = 40;
   const titleLength: number = 40;
 
   return (
@@ -85,6 +85,11 @@ export default async function Blog() {
                     <div className="h-fit overflow-clip text-sm font-medium dark:font-light">
                       {post.description}{' '}
                       <span className="invisible">{hiddenDescText}</span>
+                    </div>
+                    <div className="px-2 py-2">
+                    {post.tags?.map((tag:any) => (
+										<span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
+									))}
                     </div>
                   </CardContent>
                   <CardFooter className="flex flex-col gap-3">
