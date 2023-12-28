@@ -11,7 +11,7 @@
   .notion-page > *,
   .notion-column > * {
     padding: 3px 0px;
-  }
+  }app/blog/[slug]/styles.css
   
   .notion * {
     box-sizing: border-box;

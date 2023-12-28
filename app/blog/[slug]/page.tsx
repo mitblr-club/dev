@@ -2,15 +2,14 @@ import { NotionRenderer } from "react-notion";
 
 import { getPosts } from "../page";
 
-import "./styles.css"
+import "@/styles/styles.css"
 
 
 
 async function getBlocks({ params: { slug } }: { params: { slug: any } }) {
-  // Get all posts again
+ 
   const posts = await getPosts();
 
-  // Find the current blogpost by slug
   const post = posts.find((t:any) => t.slug === slug);
 
   const res = await fetch(`https://notion-api.splitbee.io/v1/page/${post.id}`);

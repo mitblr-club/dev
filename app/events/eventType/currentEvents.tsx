@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -73,7 +73,7 @@ export function CurrentEvents() {
                         <div className="text-sm font-light dark:font-extralight">
                           {event.date}
                         </div>
-                        <div className="text-right">
+                        <div className="text-right bg-primary p-2 rounded-2xl">
                           {index + 1}/{currentEvents.length}
                         </div>
                       </div>
