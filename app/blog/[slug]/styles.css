@@ -46,59 +46,41 @@
   .notion-gray {
     color: rgb(155, 154, 151);
   }
+ 
   .notion-red_background {
-    background-color: rgb(251, 228, 228);
+    background-color: var(--notion-red_bg) /* Light coral */
   }
+  
   .notion-pink_background {
-    background-color: rgb(244, 223, 235);
+    background-color: var(--notion-pink_bg); /* Misty rose */
   }
+  
   .notion-blue_background {
-    background-color: rgb(221, 235, 241);
+    background-color: var(--notion-blue_bg); /* Sky blue */
   }
+  
   .notion-purple_background {
-    background-color: rgb(234, 228, 242);
+    background-color: var(--notion-purple_bg); /* Lavender */
   }
+  
   .notion-teal_background {
-    background-color: rgb(221, 237, 234);
+    background-color: var(--notion-teal_bg); /* Sea green */
   }
+  
   .notion-yellow_background {
-    background-color: rgb(251, 243, 219);
+    background-color: var(--notion-yellow_bg); /* Pale goldenrod */
   }
+  
   .notion-orange_background {
-    background-color: rgb(250, 235, 221);
+    background-color: var(--notion-orange_bg); /* Peach puff */
   }
+  
   .notion-brown_background {
-    background-color: rgb(233, 229, 227);
+    background-color: var(--notion-brown_bg); /* Rosy brown */
   }
+  
   .notion-gray_background {
-    background-color: rgb(235, 236, 237);
-  }
-  .notion-red_background_co {
-    background-color: rgb(251, 228, 228, 0.3);
-  }
-  .notion-pink_background_co {
-    background-color: rgb(244, 223, 235, 0.3);
-  }
-  .notion-blue_background_co {
-    background-color: rgb(221, 235, 241, 0.3);
-  }
-  .notion-purple_background_co {
-    background-color: rgb(234, 228, 242, 0.3);
-  }
-  .notion-teal_background_co {
-    background-color: rgb(221, 237, 234, 0.3);
-  }
-  .notion-yellow_background_co {
-    background-color: rgb(251, 243, 219, 0.3);
-  }
-  .notion-orange_background_co {
-    background-color: rgb(250, 235, 221, 0.3);
-  }
-  .notion-brown_background_co {
-    background-color: rgb(233, 229, 227, 0.3);
-  }
-  .notion-gray_background_co {
-    background-color: rgb(235, 236, 237, 0.3);
+    background-color: var(--notion-gray_bg); /* Light gray */
   }
   
   .notion b {
