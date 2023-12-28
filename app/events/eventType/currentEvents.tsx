@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Autoplay from 'embla-carousel-autoplay';
 
@@ -19,10 +19,10 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-import data from './data';
-
-export function CurrentEvents() {
-  const currentEvents = data.filter((event) => event.status === 'Active');
+export function CurrentEvents({ events }: any) {
+  const currentEvents = events.filter((event: any) =>
+    event.joinable ? event : null
+  );
 
   if (currentEvents.length === 0) {
     return (
@@ -52,45 +52,49 @@ export function CurrentEvents() {
         className="h-fit bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-110 hover:bg-opacity-100 hover:shadow-lg"
       >
         <CarouselContent>
-          {currentEvents.map((event, index) => {
-            let hiddenText: string = '';
-
-            if (event.description.length > targetLength) {
-              event.description =
-                event.description.substring(0, targetLength - 3) + '...';
-            } else {
-              hiddenText = '* '.repeat(
-                (targetLength - event.description.length) / 2
-              );
-            }
-
+          {currentEvents.map((event: any, index: any) => {
             return (
               <CarouselItem key={index}>
-                <Link href="/">
+                <Link
+                  href="/events/[slug]"
+                  as={`/events/${event.slug}`}
+                  passHref
+                >
                   <Card className="h-fit">
-                    <CardHeader className="text-left">
+                    <CardHeader className="text-center">
                       <div className="flex flex-row justify-between">
                         <div className="text-sm font-light dark:font-extralight">
                           {event.date}
                         </div>
-                        <div className="text-right bg-primary p-2 rounded-2xl">
+                        <div className="rounded-2xl bg-primary p-2 text-right">
                           {index + 1}/{currentEvents.length}
                         </div>
                       </div>
-                      <CardTitle>{event.name}</CardTitle>
+                      <CardTitle>{event.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="flex flex-col gap-3">
                         <div className="text-md text-center font-medium dark:font-light md:text-lg">
-                          {event.description}{' '}
-                          <span className="invisible">{hiddenText}</span>
+                          <span>Register Here</span>
+                          <br />
+                          {event.registration}
+                        </div>
+                        <div className="pb-0 pt-2 text-center">
+                          {event.tags?.map((tag: any) => (
+                            <span
+                              key={tag}
+                              className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-5 py-3 text-sm font-semibold text-gray-700"
+                            >
+                              {tag}
+                            </span>
+                          ))}
                         </div>
                         <div className="flex flex-col gap-2 text-right">
                           <div className="text-sm font-light dark:font-extralight">
-                            Time: {event.time}
+                            Time: Add time column
                           </div>
                           <div className="text-sm font-light dark:font-extralight">
-                            Venue: {event.venue}
+                            Venue: Add Venu column
                           </div>
                         </div>
                       </div>
