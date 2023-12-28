@@ -1,5 +1,7 @@
 import { siteConfig } from '@/site.config';
 import Link from 'next/link';
+import authors from '@/data/authors';
+import Image from 'next/image';
 
 import {
   Card,
@@ -28,6 +30,7 @@ export default async function Blog() {
   const descLength: number = 40;
   const titleLength: number = 40;
 
+
   return (
     <div className="mt-c20 px-0 pb-c3 md:mt-c10 xl:mt-c5 xl:px-c8">
       <div className="text-4xl font-bold">Latest Updates</div>
@@ -38,6 +41,20 @@ export default async function Blog() {
         posts.filter((post:any)=>{
           return (post.published ? post : null)
         }).reverse().map((post: any) => {
+
+
+          let author: string = "Anonymous";
+          let pfp: string = "https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg"
+          let department: string = "Unknown";
+
+          for(const key in authors){
+            if(post.authors[0].id == key){
+              author = authors[key as keyof typeof authors].fullName;
+              pfp = authors[key as keyof typeof authors].profilePhoto;
+              department = authors[key as keyof typeof authors].department.name;
+              break;
+            }
+          }
         
 
           let hiddenDescText: string = '';
@@ -86,15 +103,27 @@ export default async function Blog() {
                       {post.description}{' '}
                       <span className="invisible">{hiddenDescText}</span>
                     </div>
-                    <div className="px-2 py-2">
+                    <div className="px-1 pt-2 pb-0">
                     {post.tags?.map((tag:any) => (
 										<span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{tag}</span>
 									))}
                     </div>
                   </CardContent>
-                  <CardFooter className="flex flex-col gap-3">
+                  <CardFooter className="flex gap-3">
+                  <Image 
+											alt={author} 
+											className="rounded-full mr-4" 
+											src={pfp} 
+											width={40}
+											height={40}
+										/>
+                    <div className='flex flex-col'>
                     <div className="text-md font-medium dark:font-light">
-                      {post.author}
+                      {author}
+                    </div>
+                    <div className="text-md font-medium dark:font-light">
+                      {department}
+                    </div>
                     </div>
                   </CardFooter>
                 </Card>

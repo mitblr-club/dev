@@ -40,8 +40,11 @@ export default async function BlogPost({
   const { post, blocks } = await getBlocks({ params: { slug: slug } });
 
   return(
-    <div>
-    <NotionRenderer blockMap={blocks} />
-  </div>
+    <div className="mt-c20 px-0 pb-c3 md:mt-c10 xl:mt-c5 xl:px-c8">
+      <div className="text-4xl font-bold">{post.title}</div>
+      <div>
+      <NotionRenderer blockMap={blocks} />
+      </div>
+    </div>
   )
 };
