@@ -4,6 +4,8 @@ import Autoplay from 'embla-carousel-autoplay';
 
 import Link from 'next/link';
 
+import { formatDate } from '@/lib/formatDate';
+
 import {
   Card,
   CardContent,
@@ -63,27 +65,29 @@ export function CurrentEvents({ events }: any) {
                   <Card className="h-fit">
                     <CardHeader className="text-center">
                       <div className="flex flex-row justify-between">
-                        <div className="text-sm font-light dark:font-extralight">
-                          {event.date}
+                        <div className="text-lg font-light dark:font-extralight">
+                          {formatDate(event.date)}
                         </div>
-                        <div className="rounded-2xl bg-primary p-2 text-right">
+                        <div className="rounded-2xl bg-primary p-2 text-right text-white">
                           {index + 1}/{currentEvents.length}
                         </div>
                       </div>
-                      <CardTitle>{event.title}</CardTitle>
+                      <CardTitle className="text-4xl">{event.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="flex flex-col gap-3">
                         <div className="text-md text-center font-medium dark:font-light md:text-lg">
-                          <span>Register Here</span>
-                          <br />
-                          {event.registration}
+                          <Link href={event.registration}>
+                            <button className="text-decoration-none transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation will-change-box-shadow active:shadow-inner-lg hover:secondary focus:secondary active:secondary relative box-border inline-flex h-12 cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap rounded-md border-none bg-primary px-4 text-left text-base font-bold text-white shadow-md transition-transform will-change-transform hover:-translate-y-2 hover:shadow-lg hover:ring-2 hover:ring-opacity-50 focus:outline-none focus:ring-2 focus:ring-opacity-50 active:translate-y-2 active:ring-2 active:ring-opacity-50">
+                              Register Here
+                            </button>
+                          </Link>
                         </div>
                         <div className="pb-0 pt-2 text-center">
                           {event.tags?.map((tag: any) => (
                             <span
                               key={tag}
-                              className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-5 py-3 text-sm font-semibold text-gray-700"
+                              className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-5 py-1 text-sm font-semibold text-gray-700"
                             >
                               {tag}
                             </span>
@@ -94,7 +98,7 @@ export function CurrentEvents({ events }: any) {
                             Time: Add time column
                           </div>
                           <div className="text-sm font-light dark:font-extralight">
-                            Venue: Add Venu column
+                            Venue: Add venue column
                           </div>
                         </div>
                       </div>

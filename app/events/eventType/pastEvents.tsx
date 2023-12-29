@@ -11,7 +11,6 @@ import {
 } from '@/components/ui/card';
 
 import { getEvents } from '../page';
-import data from './data';
 
 export default function PastEvents({ events }: any) {
   const pastEvents = events
