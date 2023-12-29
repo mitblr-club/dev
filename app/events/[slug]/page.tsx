@@ -1,5 +1,9 @@
 import { NotionRenderer } from 'react-notion';
 
+import Link from 'next/link';
+
+import { Icons } from '@/components/icons';
+
 import '@/styles/styles.css';
 
 import { getEvents } from '../page';
@@ -36,11 +40,19 @@ export default async function EventPost({
   const { event, blocks } = await getBlocks({ params: { slug: slug } });
 
   return (
-    <div className="mt-c20 px-0 pb-c3 md:mt-c10 xl:mt-c5 xl:px-c8">
-      <div className="text-4xl font-bold">{event.title}</div>
-      <div>
-        <NotionRenderer blockMap={blocks} />
+    <>
+      <Link href="/blog">
+        <div className="mt-5 flex items-center px-0 text-base font-medium text-muted-foreground transition-colors hover:text-foreground/80 xl:px-c8">
+          <Icons.arrowLeft className="h-5 w-5" />
+          <div>Back to Events</div>
+        </div>
+      </Link>
+      <div className="mt-c20 px-0 pb-c3 md:mt-c10 xl:mt-c5 xl:px-c8">
+        <div className="text-4xl font-bold">{event.title}</div>
+        <div>
+          <NotionRenderer blockMap={blocks} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

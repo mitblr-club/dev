@@ -79,7 +79,15 @@ export default async function Blog() {
 
               return (
                 <div className="mt-c5" key={post.id}>
-                  <Link href="/blog/[slug]" as={`/blog/${post.slug}`} passHref>
+                  <Link
+                    href={`/blog/[slug]?author=${encodeURIComponent(
+                      author
+                    )}&pfp=${encodeURIComponent(
+                      pfp
+                    )}&department=${encodeURIComponent(department)}`}
+                    as={`/blog/${post.slug}?author=${author}&pfp=${pfp}&department=${department}`}
+                    passHref
+                  >
                     <Card className="flex h-fit w-c80 flex-col bg-card bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25">
                       <CardHeader>
                         <div className="text-md font-light dark:font-extralight">
@@ -117,7 +125,7 @@ export default async function Blog() {
                           height={40}
                         />
                         <div className="flex flex-col">
-                          <div className="text-md font-medium dark:font-light">
+                          <div className="text-md font-semibold dark:font-medium">
                             {author}
                           </div>
                           <div className="text-md font-medium dark:font-light">
